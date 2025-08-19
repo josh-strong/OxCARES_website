@@ -1,8 +1,8 @@
 /* OxCARES custom styles on top of Pico.css */
 
 :root {
-  --brand: #10385b;
-  --brand-accent: #0a7bdc;
+  --brand: #002147; /* Oxford Blue */
+  --brand-accent: #0f4d92; /* Lighter Oxford Blue for accents */
 }
 
 body {
@@ -40,6 +40,10 @@ small { color: #333; }
 }
 
 .menu a { color: var(--brand); }
+
+/* Global link colour in content */
+a { color: var(--brand-accent); }
+a:hover { color: #0c3d73; }
 
 .menu a[aria-current="page"] {
   color: var(--brand-accent);
