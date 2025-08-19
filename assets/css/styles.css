@@ -9,6 +9,11 @@ body {
   background: linear-gradient(180deg, #f8fbff, #ffffff);
 }
 
+/* Force light theme and improve base text contrast */
+html { color-scheme: light; }
+p, li, dd, dt { color: #111; }
+small { color: #333; }
+
 .site-header .nav {
   display: flex;
   align-items: center;
@@ -33,6 +38,8 @@ body {
   list-style: none;
   margin: 0;
 }
+
+.menu a { color: var(--brand); }
 
 .menu a[aria-current="page"] {
   color: var(--brand-accent);
