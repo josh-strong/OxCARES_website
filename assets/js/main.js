@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       link.setAttribute("aria-current", "page");
     }
   });
+
+  // (removed trifecta interactions)
 });
 
 
