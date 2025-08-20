@@ -117,13 +117,13 @@ a:hover { color: #0c3d73; }
   gap: 1rem;
 }
 .hero-logo {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   transform: translateY(-6px);
 }
 @media (min-width: 768px) {
-  .hero-logo { width: 96px; height: 96px; transform: translateY(-8px); }
+  .hero-logo { width: 108px; height: 108px; transform: translateY(-8px); }
 }
 
 /* (removed trifecta styles) */
