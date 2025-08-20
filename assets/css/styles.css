@@ -40,6 +40,9 @@ small { color: #333; }
   .brand span { font-size: 1.28rem; }
 }
 
+/* Hide header brand logo on homepage to avoid duplicate with hero logo */
+body.home .site-header .brand img { display: none; }
+
 .menu {
   display: flex;
   align-items: center;
