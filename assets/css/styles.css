@@ -32,12 +32,12 @@ small { color: #333; }
 }
 
 /* Brand sizing: slightly larger logo and wordmark */
-.brand img { width: 44px; height: 44px; }
-.brand span { font-size: 1.25rem; line-height: 1; }
+.brand img { width: 36px; height: 36px; object-fit: contain; }
+.brand span { font-size: 1.2rem; line-height: 1; }
 
 @media (min-width: 768px) {
-  .brand img { width: 48px; height: 48px; }
-  .brand span { font-size: 1.35rem; }
+  .brand img { width: 40px; height: 40px; }
+  .brand span { font-size: 1.28rem; }
 }
 
 .menu {
@@ -104,6 +104,22 @@ a:hover { color: #0c3d73; }
   display: flex;
   gap: 0.75rem;
   margin-top: 1rem;
+}
+
+/* Hero brand composition */
+.hero-brand {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .hero-logo { width: 96px; height: 96px; }
 }
 
 /* (removed trifecta styles) */
