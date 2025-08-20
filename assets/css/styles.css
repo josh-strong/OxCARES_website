@@ -32,12 +32,12 @@ small { color: #333; }
 }
 
 /* Brand sizing: slightly larger logo and wordmark */
-.brand img { width: 36px; height: 36px; }
-.brand span { font-size: 1.15rem; line-height: 1; }
+.brand img { width: 44px; height: 44px; }
+.brand span { font-size: 1.25rem; line-height: 1; }
 
 @media (min-width: 768px) {
-  .brand img { width: 40px; height: 40px; }
-  .brand span { font-size: 1.25rem; }
+  .brand img { width: 48px; height: 48px; }
+  .brand span { font-size: 1.35rem; }
 }
 
 .menu {
