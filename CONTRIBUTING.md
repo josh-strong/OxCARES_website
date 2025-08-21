@@ -33,8 +33,6 @@ cd OxCARES_website
 git remote add upstream https://github.com/josh-strong/OxCARES_website.git
 ```
 
-![Clone URL – screenshot placeholder](docs/images/02_clone.png)
-
 ---
 
 ## 3) Create a new branch for your change
@@ -56,8 +54,6 @@ Examples of what to ask the AI
 
 Tip: Mention the file you want to edit (e.g. `index.html`, `assets/css/styles.css`).
 
-![Cursor chat – screenshot placeholder](docs/images/03_cursor.png)
-
 ---
 
 ## 5) Preview locally
@@ -66,8 +62,6 @@ From the project folder, run:
 python3 -m http.server 8080
 ```
 Open http://localhost:8080 in your browser. Refresh after each change. Use Cmd/Ctrl+Shift+R for a hard refresh if needed.
-
-![Local preview – screenshot placeholder](docs/images/04_preview.png)
 
 ---
 
@@ -89,8 +83,6 @@ git push -u origin feature/your-change
 ## 8) Open a Pull Request (PR)
 1. Go to your fork on GitHub. You should see a prompt to "Compare & pull request".
 2. Write a short description and submit the PR to `josh-strong/OxCARES_website`.
-
-![Open PR – screenshot placeholder](docs/images/05_open_pr.png)
 
 Reference: https://docs.github.com/pull-requests/collaborating-with-pull-requests
 
