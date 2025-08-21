@@ -1,45 +1,28 @@
-# OxCARES: Oxford Clinical AI Research for Enhanced Safety — Website
+# OxCARES Logo Package
 
-A lightweight, static, multi‑page website for OxCARES with a clean, modern design. No build step required.
+## Palette
+- Oxford Blue (primary): #002147
+- Accent Blue: #0f4d92
+- Neutral text: #111
+- Background: #ffffff
 
-## Local preview
+## File List
+- logo_mark_primary.svg
+- logo_mark_reversed.svg
+- logo_lockup_horizontal.svg
+- logo_lockup_stacked.svg
+- favicon_16.png
+- favicon_32.png
+- apple_touch_180.png
 
-Open `index.html` in your browser. If you prefer a local server (for correct routing of relative assets), use Python:
+## Usage Guidelines
+- Minimum size: 24 px for symbol, 120 px for lockup
+- Clearspace: maintain half the symbol’s width as padding around
+- Works in 1-colour (black/white)
+- Ensure contrast meets WCAG AA
 
-```bash
-python3 -m http.server 8080
-```
-
-Then visit `http://localhost:8080`.
-
-## Structure
-
-- `index.html` — Home
-- `about.html` — About OxCARES
-- `people.html` — Team and collaborators
-- `research.html` — Research themes and projects
-- `publications.html` — Publications
-- `news.html` — News
-- `events.html` — Events
-- `contact.html` — Contact
-- `assets/css/styles.css` — Custom styles (on top of Pico.css)
-- `assets/js/main.js` — Minimal interactivity (e.g. mobile nav)
-- `assets/img/` — Images and logos
-
-## Customisation
-
-- Update copy on each page to reflect current projects, people, and outputs.
-- Replace placeholder images in `assets/img/`.
-- Adjust colours and typography in `assets/css/styles.css`.
-
-## Deployment
-
-Any static hosting works (GitHub Pages, Netlify, Vercel static, S3, on‑prem). For GitHub Pages:
-
-1. Push this repository to GitHub.
-2. In GitHub repo settings → Pages → Build and deployment → Source: deploy from branch. Choose `main` and `/ (root)`.
-3. Save. Your site will be available at the Pages URL.
-
-## Acknowledgements
-
-Clinician partners at OxSTaR: see the OxSTaR Centre website for more information: https://www.oxstar.ox.ac.uk/
+## Do / Don’t
+- Do use official colour palette
+- Do maintain aspect ratio
+- Don’t distort or rotate the logo
+- Don’t change colours outside palette
