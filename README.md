@@ -1,5 +1,9 @@
 # OxCARES Logo Package
 
+For how to edit this website using Cursor or Copilot, see:
+- CONTRIBUTING: ./CONTRIBUTING.md
+- Quickstart for Editors: ./docs/QUICKSTART.md
+
 ## Palette
 - Oxford Blue (primary): #002147
 - Accent Blue: #0f4d92
