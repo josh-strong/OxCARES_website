@@ -1,12 +1,16 @@
-/* OxCARES custom styles on top of Pico.css */
+/* OxCAIRES custom styles on top of Pico.css */
 
 :root {
   --brand: #002147; /* Oxford Blue */
-  --brand-accent: #0f4d92; /* Lighter Oxford Blue for accents */
+  --brand-accent: #002147; /* unified Oxford Blue */
 }
 
 body {
-  background: linear-gradient(180deg, #f8fbff, #ffffff);
+  background-image: linear-gradient(180deg, rgba(248, 251, 255, 0.4), rgba(255, 255, 255, 0.55)), url('../img/Whisk_2c86d9f2a5.jpeg');
+  background-size: 100% 100%, cover;
+  background-position: center top, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
 }
 
 /* Force light theme and improve base text contrast */
@@ -54,11 +58,11 @@ body.home .site-header .brand img { display: none; }
 .menu a { color: var(--brand); }
 
 /* Global link colour in content */
-a { color: var(--brand-accent); }
-a:hover { color: #0c3d73; }
+a { color: var(--brand); }
+a:hover { color: var(--brand); opacity: 0.9; }
 
 .menu a[aria-current="page"] {
-  color: var(--brand-accent);
+  color: var(--brand);
   font-weight: 600;
 }
 
@@ -117,13 +121,13 @@ a:hover { color: #0c3d73; }
   gap: 1rem;
 }
 .hero-logo {
-  width: 80px;
-  height: 80px;
+  width: 180px;
+  height: 180px;
   object-fit: contain;
   transform: translateY(-6px);
 }
 @media (min-width: 768px) {
-  .hero-logo { width: 108px; height: 108px; transform: translateY(-8px); }
+  .hero-logo { width: 260px; height: 260px; transform: translateY(-10px); }
 }
 
 /* (removed trifecta styles) */
@@ -132,6 +136,32 @@ a:hover { color: #0c3d73; }
   padding: 2rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   margin-top: 2rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 999px;
+  background: #fff;
+  text-decoration: none;
+}
+.social-links a:hover {
+  background: rgba(0, 33, 71, 0.04);
+  border-color: rgba(0, 33, 71, 0.16);
+}
+.social-links .social-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 .skip-link {
@@ -157,8 +187,118 @@ a:hover { color: #0c3d73; }
   border-radius: 0.5rem;
 }
 
+/* Fine-tune headroom for specific images */
+.person img.align-top {
+  object-position: center top;
+}
+
 .person h3 {
   margin-bottom: 0.25rem;
+}
+
+/* Members section */
+.filters {
+  margin: 0.5rem 0 1rem 0;
+}
+.filters .search-row {
+  margin-bottom: 0.5rem;
+}
+.filters .grid {
+  align-items: end;
+}
+/* Make search full-width across grid row */
+.filters #filter-search {
+  width: 100%;
+}
+
+.chips-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.chips-group legend {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.chip {
+  appearance: none;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #fff;
+  color: #002147;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] {
+  background: rgba(0, 33, 71, 0.08);
+  border-color: rgba(0, 33, 71, 0.25);
+  color: #002147;
+}
+
+.members {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.member figure {
+  display: grid;
+  gap: 0.5rem;
+}
+.member img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: opacity 220ms ease, filter 220ms ease;
+}
+.member h3 {
+  margin-bottom: 0.25rem;
+}
+
+/* Expandable member details */
+.member {
+  position: relative;
+  padding: 0.5rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+  overflow: hidden;
+}
+.member:hover, .member:focus-within, .member.expanded {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.member .details {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.96) 24%, #ffffff 60%);
+  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+.member.expanded .details, .member:hover .details, .member:focus-within .details {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.member .details p {
+  margin: 0.25rem 0 0.25rem 0;
+}
+
+/* Fade avatar on hover/expand for focus on details */
+.member:hover img, .member:focus-within img, .member.expanded img {
+  opacity: 0.55;
+  filter: saturate(0.9);
 }
 
 
